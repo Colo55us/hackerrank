@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+   Scanner s1 = new Scanner(System.in);
+        String t1 = s1.next();
+        int x = t1.indexOf("A");
+        
+        if(x>=0)
+            {
+            if((t1.indexOf("1")==0)&&(t1.indexOf("2")==1))
+             { String t2 = "00"+t1.substring(2,8);
+              System.out.println(t2);}
+            else{
+                 t1 = t1.substring(0,8);
+                System.out.println(t1);}
+           }
+        else
+               { if((t1.indexOf("1")==0)&&(t1.indexOf("2")==1))
+                   {
+                   t1 = t1.substring(0,8);
+                System.out.println(t1);
+               }
+                  else{ int y = Integer.parseInt(t1.substring(0,2));
+                   y = y + 12;
+                   String t2 = Integer.toString(y);
+                   t1 = t2 + t1.substring(2,8);
+                   System.out.println(t1);
+                      }}
+               
+            
+            
+            
+        
+    }
+}

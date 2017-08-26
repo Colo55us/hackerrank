@@ -1,0 +1,48 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s1 = new Scanner(System.in);
+        int i = s1.nextInt();
+        int j = s1.nextInt();
+        int k = s1.nextInt();
+        int c = j-i+1;
+        int i1 = i;
+        int l[] = new int[c];
+        int p[] = new int[c];
+        int flag = 0;
+        for(int m = 0;m<c;m++)
+            {
+              p[m]=i1;
+              i1=i1+1;
+             }
+         
+        for(int m=0;m<c;m++)
+        {
+            
+            while(p[m]!=0)
+                {
+                  l[m] = l[m]*10;
+                  l[m] = l[m]+(p[m]%10); 
+                  p[m]=p[m]/10;
+                } 
+                
+        }  
+        for(int m=0;m<c;m++)
+            {
+             float x = Math.abs(i-l[m]);
+             i++;
+              float y = x/k;
+            
+            if((y*10)%10==0)
+                { flag=flag+1;}
+            }
+     
+        System.out.println(flag);
+        
+    }
+}

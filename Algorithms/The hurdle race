@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int k = in.nextInt();
+        int[] a = new int[n];
+        for(int height_i=0; height_i < n; height_i++){
+            a[height_i] = in.nextInt();
+        }
+        int x=0,temp=0;
+        // your code goes here
+        for(int i=0;i<n;i++)
+            {
+            if(k>a[i])
+            {
+             x = x+1;
+            }
+        }
+            if(x==n)
+                System.out.println("0");
+            else 
+            {
+                for(int i=0;i<n-1;i++)
+             {
+                   
+                        if(a[i+1]<a[i])
+                   {
+                            temp=a[i]; 
+                            a[i]=a[i+1];
+                            a[i+1]=temp; 
+                   }
+               
+                
+              } System.out.println(a[n-1]-k);
+            }
+           
+    
+}
+}
+

@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s1 = new Scanner(System.in);
+        int n = s1.nextInt();
+        int k = s1.nextInt();
+        
+        int a[] = new int[n+1];
+        for(int i=0;i<n;i++)
+            {
+            a[i]=s1.nextInt();
+            }
+        int share = s1.nextInt();
+        int shared_bill = 0;
+        for(int i=0;i<n;i++)
+        {
+            shared_bill+=a[i];
+        }
+       
+        if(((shared_bill-a[k])/2)==share)
+            System.out.println("Bon Appetit");
+        else
+            System.out.println(share-((shared_bill-a[k])/2));
+    }
+}

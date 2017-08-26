@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.math.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s1 = new Scanner(System.in);
+        BigInteger n1 = s1.nextBigInteger();
+        BigInteger n2 = s1.nextBigInteger();
+        int c = s1.nextInt();
+        BigInteger r[] = new BigInteger[c+1];
+        for(int i=0;i<c;i++)
+            {
+            r[i] = n1.add(n2.multiply(n2));
+            n1 = n2;
+            n2 = r[i];
+        }
+       
+        System.out.println(r[c-3]);
+            
+    }
+}

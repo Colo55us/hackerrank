@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        long a = in.nextLong();
+        long b = in.nextLong();
+        long c = in.nextLong();
+        long d = in.nextLong();
+        long e = in.nextLong();
+        long num[] = new long[6];
+         num[0]=b+c+d+e;
+         num[1]=a+c+d+e;
+         num[2]=a+b+d+e;
+         num[3]=a+b+c+e;
+         num[4]=a+b+c+d;
+         long max = num[0];
+        for(int i=1;i<5;i++)
+            {
+            if(max<num[i])
+                {max=num[i];}
+        }
+        long min=num[0];
+        for(int i=1;i<5;i++)
+            {
+            if(min>num[i])
+                {min=num[i];}
+        }
+        System.out.println(min+" "+max);
+    }
+    
+}
+

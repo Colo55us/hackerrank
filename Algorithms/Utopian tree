@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner s1 = new Scanner(System.in);
+        int t = s1.nextInt();
+        int n[] = new int[t+1];
+        int l[] = new int[t+1];
+        Arrays.fill(l,1);
+        int flag[] = new int[t+1];
+        
+        for(int i=0;i<t;i++)
+            {
+              n[i] = s1.nextInt();
+             }
+        
+        for(int i=0;i<t;i++)
+            {
+               for(int j  =1;j<=n[i];j++)
+                 {
+                    if(j%2==1)
+                        {
+                         l[i]=2*l[i];
+                         flag[i]=flag[i]+1;
+                        
+                        }
+                    else
+                        {
+                         l[i]=l[i]+1;
+                          flag[i]=flag[i]+1;
+                         
+                        }
+                    
+                   }
+                     
+                   
+            }
+        for(int i=0;i<t;i++)
+            {
+             System.out.println(l[i]);
+            }
+    }
+}

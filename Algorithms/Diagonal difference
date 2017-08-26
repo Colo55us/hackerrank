@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+import java.math.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner s0 = new Scanner(System.in);
+        int n = s0.nextInt();
+        int a[][] = new int[n+1][n+1];
+        int s1 = 0, s2 = 0 , s = 0,m=0;
+        for(int i=0;i<n;i++)
+            {for(int j=0;j<n;j++)
+                {
+                a[i][j]=s0.nextInt();
+                }
+            }
+        for(int i=0;i<n;i++)
+            {
+            s1 = s1 + ((int)a[i][i]);
+            }
+       /* for(int i=0;i<n;i++)
+            {
+            for(int j=n-1;j>=0;j--)
+                {
+                s2 = s2 + ((int)a[i][j]);break;
+                }
+            }*/
+        int q = n-1;
+        do{
+            s2 = s2 + a[m][q];
+            q--;
+            m++;
+        }while(q>=0 && m<=n-1);
+        s = s1-s2;
+        if (s>=0)
+        System.out.println(s);
+        else
+          {  s = Math.abs(s);
+           System.out.println(s);
+          }
+    }
+}
