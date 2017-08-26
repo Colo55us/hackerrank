@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s1 = new Scanner(System.in);
+        try{
+            int a = s1.nextInt();
+            int b = s1.nextInt();
+            System.out.println(a/b);
+        }
+        catch(InputMismatchException e)
+        {
+            System.out.println(e.getClass().getCanonicalName());
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println(e.getClass().getCanonicalName() +": / by zero");
+        }
+    }
+}

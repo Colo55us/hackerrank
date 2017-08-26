@@ -1,0 +1,34 @@
+import java.util.*;
+import java.io.*;
+
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int t=in.nextInt();
+        int x , y ,z= 0;
+        int a[] = new int[t];
+        int b[] = new int[t];
+        int n[] = new int[t];
+        for(int i=0;i<t;i++){
+             a[i] = in.nextInt();
+             b[i] = in.nextInt();
+             n[i] = in.nextInt();
+        }
+        for(int i=0;i<t;i++)
+            {y=0;
+           
+               for(int j=1;j<=n[i];j++)
+                  { z = a[i]  ;
+                     for(int k = 0;k<j;k++)
+                        { 
+                          z = z+  ((int)Math.pow(2,k)*b[i]);
+                           
+                     }
+                     System.out.print(z+" ");
+                      
+               }
+                System.out.println("");
+    }
+}
+}
