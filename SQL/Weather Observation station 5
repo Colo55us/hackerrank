@@ -1,0 +1,8 @@
+Select * from 
+(
+Select CITY , LENGTH(CITY) from STATION order by LENGTH(CITY) asc, CITY asc limit 1
+)temp1
+union all
+Select * from
+(select CITY,LENGTH(CITY) from STATION order by LENGTH(CITY) desc,CITY desc limit 1 )
+temp2

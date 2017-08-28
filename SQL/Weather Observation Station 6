@@ -1,0 +1,9 @@
+Select DISTINCT CITY from STATION where CITY LIKE 'A%'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'E%' 
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'I%'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'O%'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'U%'

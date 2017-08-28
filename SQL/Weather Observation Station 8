@@ -1,0 +1,57 @@
+Select DISTINCT CITY from STATION where CITY LIKE 'A%A'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'E%A' 
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'I%A'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'O%A'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'U%A'
+
+union all
+
+Select DISTINCT CITY from STATION where CITY LIKE 'A%E'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'E%E' 
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'I%E'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'O%E'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'U%E'
+
+union all
+
+Select DISTINCT CITY from STATION where CITY LIKE 'A%I'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'E%I' 
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'I%I'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'O%I'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'U%I'
+
+union all
+
+Select DISTINCT CITY from STATION where CITY LIKE 'A%O'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'E%O' 
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'I%O'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'O%O'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'U%O'
+
+union all
+
+Select DISTINCT CITY from STATION where CITY LIKE 'A%U'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'E%U' 
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'I%U'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'O%U'
+union all
+Select DISTINCT CITY from STATION where CITY LIKE 'U%U'
